@@ -1,0 +1,200 @@
+15:51:50,461  INFO app.view.web.action.AppGoodsViewAction:267 - %yLogFactory_log:======================
+15:51:50,464  INFO app.view.web.action.AppGoodsViewAction:268 - %ygoods_logger:======================
+14:51:36,778 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+14:51:36,782 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+14:51:36,782  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+14:51:36,786 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+14:51:36,788 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+14:51:36,793 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+14:51:36,794 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+14:51:36,795 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+14:51:36,797 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+14:51:36,798 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+14:51:36,799 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+14:51:36,826 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+14:51:36,831 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+14:51:36,833 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+14:51:36,833 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+14:51:36,833 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+14:51:36,834 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+14:51:36,834 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+14:52:43,343 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+14:52:43,346 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+14:52:43,346  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+14:52:43,350 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+14:52:43,351 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+14:52:43,355 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+14:52:43,356 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+14:52:43,357 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+14:52:43,358 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+14:52:43,360 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+14:52:43,360 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+14:52:43,375 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+14:52:43,379 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+14:52:43,380 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+14:52:43,381 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+14:52:43,381 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+14:52:43,381 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+14:52:43,381 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+14:53:42,403 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+14:53:42,406 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+14:53:42,407  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+14:53:42,412 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+14:53:42,414 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+14:53:42,420 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+14:53:42,421 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+14:53:42,423 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+14:53:42,424 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+14:53:42,425 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+14:53:42,426 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+14:53:42,441 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+14:53:42,446 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+14:53:42,448 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+14:53:42,448 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+14:53:42,448 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+14:53:42,448 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+14:53:42,449 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+22:52:01,709 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+22:52:01,712 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+22:52:01,713  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+22:52:01,717 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+22:52:01,719 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+22:52:01,725 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+22:52:01,726 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+22:52:01,728 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+22:52:01,729 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+22:52:01,730 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+22:52:01,731 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+22:52:01,752 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+22:52:01,757 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+22:52:01,758 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+22:52:01,758 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+22:52:01,759 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+22:52:01,759 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+22:52:01,759 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+22:53:35,389 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+22:53:35,391 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+22:53:35,391  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+22:53:35,394 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+22:53:35,395 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+22:53:35,399 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+22:53:35,400 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+22:53:35,401 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+22:53:35,403 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+22:53:35,404 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+22:53:35,404 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+22:53:35,422 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+22:53:35,426 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+22:53:35,427 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+22:53:35,427 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+22:53:35,428 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+22:53:35,428 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+22:53:35,428 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+22:55:14,241 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+22:55:14,247 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+22:55:14,249  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+22:55:14,259 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+22:55:14,263 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+22:55:14,272 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+22:55:14,277 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+22:55:14,282 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+22:55:14,287 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+22:55:14,293 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+22:55:14,297 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+22:55:14,340 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+22:55:14,367 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+22:55:14,372 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+22:55:14,375 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+22:55:14,377 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+22:55:14,379 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+22:55:14,382 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+23:12:23,225 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+23:12:23,232 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+23:12:23,234  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+23:12:23,245 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+23:12:23,250 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+23:12:23,260 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+23:12:23,265 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+23:12:23,270 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+23:12:23,276 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+23:12:23,280 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+23:12:23,283 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+23:12:23,320 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+23:12:23,344 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+23:12:23,348 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+23:12:23,350 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+23:12:23,352 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+23:12:23,354 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+23:12:23,355 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+16:13:31,356 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+16:13:31,359 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+16:13:31,359  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+16:13:31,362 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+16:13:31,364 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+16:13:31,367 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+16:13:31,368 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+16:13:31,369 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+16:13:31,370 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+16:13:31,371 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+16:13:31,372 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+16:13:31,389 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+16:13:31,393 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+16:13:31,393 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+16:13:31,394 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+16:13:31,394 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+16:13:31,394 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+16:13:31,394 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+16:16:26,075 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+16:16:26,078 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+16:16:26,079  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+16:16:26,083 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+16:16:26,085 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+16:16:26,089 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+16:16:26,090 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+16:16:26,091 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+16:16:26,092 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+16:16:26,093 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+16:16:26,094 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+16:16:26,108 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+16:16:26,112 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+16:16:26,113 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+16:16:26,113 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+16:16:26,113 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+16:16:26,114 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+16:16:26,114 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+16:24:27,860 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+16:24:27,861 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+16:24:27,862  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+16:24:27,866 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+16:24:27,867 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+16:24:27,872 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+16:24:27,874 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+16:24:27,876 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+16:24:27,878 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+16:24:27,879 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+16:24:27,880 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+16:24:27,900 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+16:24:27,907 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+16:24:27,907 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+16:24:27,908 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+16:24:27,908 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+16:24:27,908 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+16:24:27,908 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros
+16:25:08,121 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yStarting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+16:25:08,123 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+16:25:08,123  INFO org.apache.velocity.app.VelocityEngine:49 - %yLogSystem has been deprecated. Please use a LogChute implementation.
+16:25:08,128 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yDefault ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+16:25:08,129 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+16:25:08,132 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+16:25:08,134 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Literal
+16:25:08,135 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Macro
+16:25:08,136 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Parse
+16:25:08,137 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Include
+16:25:08,138 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yLoaded System Directive: org.apache.velocity.runtime.directive.Foreach
+16:25:08,155 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yCreated '20' parsers.
+16:25:08,160 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+16:25:08,161 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : Default library not found.
+16:25:08,162 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInline = true : VMs can be defined inline in templates
+16:25:08,162 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+16:25:08,162 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+16:25:08,162 DEBUG org.apache.velocity.app.VelocityEngine:52 - %yVelocimacro : autoload off : VM system will not automatically reload global library macros

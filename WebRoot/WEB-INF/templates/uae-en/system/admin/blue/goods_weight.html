@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link
+	href="$!webPath/resources/style/system/manage/$!{config.websiteCss}/template.css"
+	rel="stylesheet" type="text/css" />
+<script src="$!webPath/resources/js/jquery-1.6.2.js"></script>
+<script>
+	function ajax_update(id, fieldName, obj, value) {
+		var val;
+		if (value == undefined) {
+			val = jQuery(obj).val();
+		} else
+			val = value;
+		jQuery.ajax({
+			type : 'POST',
+			url : '$!webPath/admin/goods_weight_ajax.htm',
+			data : {
+				"id" : id,
+				"fieldName" : fieldName,
+				"value" : val
+			},
+			success : function(data) {
+				if (val == "") {
+					jQuery(obj).attr(
+							"src",
+							"$!webPath/resources/style/system/manage/blue/images/"
+									+ data + ".png");
+				}
+			}
+		});
+	}
+
+	function saveForm() {
+		var submitFlag = true;
+		jQuery.ajax({
+			type : "POST",
+			url : "$!webPath/admin/goods_weight_update.htm",
+			data : "",
+			beforeSend : function() {
+				$("#save").attr({
+					disabled : "disabled"
+				});
+			},
+			success : function(data) {
+				alert(data)
+			},
+			complete : function() {
+				submitFlag = true;
+			},
+		})
+	}
+	
+	function updateIndex(){
+		
+	}
+	
+</script>
+<style>
+.fshop_table_copy {
+	border-collapse: collapse;
+	width: 50%;
+	clear: both;
+}
+
+.fshop_table_copy th {
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #C6C9CA;
+	white-space: nowrap;
+	border-top: 1px solid #C6C9CA;
+	background: #F2F4F6;
+	border-right: 1px solid #C6C9CA;
+	padding: 0px;
+}
+
+.fshop_table_copy tr {
+	margin: 5px 0;
+}
+</style>
+</head>
+<body>
+	<div class="cont">
+		<h3 class="seth">商品权重管理</h3>
+		<div class="nav_list">
+			<ul>
+				<li><a href="$!webPath/admin/goods_weight.htm" class="this"><b>商品权重维度信息</b></a></li>
+				<li><a href="$!webPath/admin/goods_weight_add.htm"><b>商品权重维度新增</b></a></li>
+			</ul>
+		</div>
+	</div>
+	<form name="ListForm" id="ListForm" method="post" action="">
+		<div id="goods_weight">
+			<table width="80%" border="0" cellspacing="0" cellpadding="0"
+				class="fshop_table_copy">
+				<tr>
+					<th width="10%">&nbsp;</th>
+					<th width="30%"><span class="form_btna">权重维度</span></th>
+					<th width="30%"><span class="form_btna">权重比率</span></th>
+					<th width="30%"><span class="form_btna">显示</span></th>
+				</tr>
+				#foreach($obj in $!objs)
+				<tr>
+					<td><input name="checkbox" type="checkbox" id="checkbox"
+						value="$!obj.id" /></td>
+					<td align="center">$obj.dimensionality</td>
+					<td align="center"><label> <textarea name="textarea"
+								cols="20" rows="1" title="可编辑"
+								onblur="ajax_update('$!obj.id','value',this)">$!obj.value</textarea>
+					</label></td>
+					<td align="center"><img alt=""
+						src="$!webPath/resources/style/system/manage/blue/images/$!{obj.display}.png"
+						width="21" height="23"
+						onclick="ajax_update('$!obj.id','display',this)"
+						style="cursor: pointer;" title="可编辑" /></td>
+
+				</tr>
+				#end
+			</table>
+			<div class="submit1">
+				<span class="sub"> <input name="save" id="save" type="button"
+					value="计算商品权重" onclick="saveForm()" />
+				</span>
+			</div>
+
+			<div class="submit1">
+				<span class="sub"><input name="search" id="search"
+					type="button" value="更新索引" onclick="updateIndex()" /></span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

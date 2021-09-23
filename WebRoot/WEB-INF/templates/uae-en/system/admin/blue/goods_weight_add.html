@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link
+	href="$!webPath/resources/style/system/manage/$!{config.websiteCss}/template.css"
+	rel="stylesheet" type="text/css" />
+<script src="$!webPath/resources/js/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+	function saveForm(){
+		 jQuery("#theForm").submit();
+	}
+</script>
+</head>
+<body>
+	<div class="cont">
+		<h3 class="seth">商品权重管理</h3>
+		<div class="nav_list">
+			<ul>
+				<li><a href="$!webPath/admin/goods_weight.htm"><b>商品权重维度信息</b></a></li>
+				<li><a href="$!webPath/admin/goods_weight_add.htm" class="this"><b>商品权重维度新增</b></a></li>
+			</ul>
+		</div>
+	</div>
+	<form action="$!webPath/admin/goods_weight_save.htm" method="Post"
+		id="theForm" name="theForm">
+		<div id="edit">
+			<div class="setcont editul">
+				<ul class="set1">
+					<li class="setcont_bg"><strong class="sred">*</strong>维度名称</li>
+					<li><span><input name="dimensionality"
+							id="dimensionality" size="20" /></span></li>
+				</ul>
+				<ul class="set1">
+					<li class="setcont_bg"><strong class="sred">*</strong>维度比例</li>
+					<li><span><input name="value" id="value" size="20" /></span></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+	<div class="submit">
+		<span class="pad120"><input name="save" type="button"
+			value="提交" onclick="saveForm()" /></span>
+	</div>
+</body>
+</html>
