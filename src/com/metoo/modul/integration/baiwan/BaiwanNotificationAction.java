@@ -39,6 +39,7 @@ public class BaiwanNotificationAction {
 				e.printStackTrace();
 			}
          }
+        user.setWater_drops_unused(user.getWater_drops_unused());
         user.setFirebase_token(str);
         this.userService.update(user);
 	}

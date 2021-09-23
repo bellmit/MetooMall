@@ -235,6 +235,7 @@ public class OrderForm extends IdEntity {
 	private String ipn;// 记录Paypal ipn回调数据
 	private int ipn_status;// Paypal回调状态 -1：失败 0:回调异常 1：回调成功 
 	private int payment_company;// 0：货到付款 1：Paypal 2:Glocash 3:百万支付
+	private String payment_msg;// 付款信息
 	
 	@OneToMany(mappedBy = "of", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
 	private List<GoodsVoucherInfo> GoodsVoucherInfoList;
@@ -1087,6 +1088,14 @@ public class OrderForm extends IdEntity {
 
 	public void setPayment_company(int payment_company) {
 		this.payment_company = payment_company;
+	}
+
+	public String getPayment_msg() {
+		return payment_msg;
+	}
+
+	public void setPayment_msg(String payment_msg) {
+		this.payment_msg = payment_msg;
 	}
 
 }

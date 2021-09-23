@@ -223,7 +223,7 @@ public class BaiwanManagerAction {
 	        			OrderForm obj = orderForms.get(0);
 	        			if(obj.getUser_id().equals(user.getId().toString())){
 	        				if(obj.getOrder_main() == 1){
-		        				if(obj != null && obj.getOrder_status() == 10){
+		        				if(obj != null && obj.getOrder_status() == 10 || obj.getOrder_status() == 115 || obj.getOrder_status() == 105){
 		        					if(dto.getAmount() > 0 
 		        							&& CommUtil.subtract(dto.getAmount(), obj.getPayment_amount()) == 0){
 		        						// 1：查询百万支付
@@ -388,11 +388,20 @@ public class BaiwanManagerAction {
 		            						if(result != null && !result.equals("")){
 		            							Map result_map = Json.fromJson(Map.class,
 		            									result);
-		            							if(result_map.get("status").equals("2")){
-		            								obj.setPayment_company(3);
-		            								this.orderService.update(obj);
-		            								return ResponseUtils.ok(result_map.get("msg"));
+		            							obj.setPayment_msg(result_map.get("msg").toString());
+		            							obj.setPayment_company(3);
+		            							if(result_map.get("status").equals("1")){
+		            								obj.setOrder_status(115);
+		            							}else if(result_map.get("status").equals("2")){
+		            								obj.setOrder_status(20);
+		            							}else if(result_map.get("status").equals("3") 
+		            									|| result_map.get("status").equals("4")){
+		            								obj.setOrder_status(110);
+		            							}else{
+		            								obj.setOrder_status(105);
 		            							}
+		            							
+		            							this.orderService.update(obj);
 		            							return ResponseUtils.badArgument(Integer.parseInt(result_map.get("status").toString()), result_map.get("msg").toString());
 		            						}
 		            						return ResponseUtils.fail(4500, "Payment failure");
@@ -402,7 +411,13 @@ public class BaiwanManagerAction {
 		            					 return ResponseUtils.badArgument("Do not maliciously tamper with the param");
 		            				}
 		        				}else{
-		        					 return ResponseUtils.badArgument("Abnormal orders");
+		        					if(obj.getOrder_status() == 20){
+		        						 return ResponseUtils.badArgument("Order paid");
+		        					}else  if(obj.getOrder_status() == 110){
+		        						 return ResponseUtils.badArgument("Payment processing");
+		        					}else{
+		        						 return ResponseUtils.badArgument("The order has timed out, please resubmit the order");
+		        					}
 		        				}
 		        			}else{
 		        				return ResponseUtils.badArgument("Do not tamper with the order information");
