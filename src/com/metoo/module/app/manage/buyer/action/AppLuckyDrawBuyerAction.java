@@ -136,7 +136,7 @@ public class AppLuckyDrawBuyerAction {
 					int water = 0;
 					if(num < 0){
 						water = user.getWater_drops_unused() - luckyDraw.getWater() >= 0 ?  luckyDraw.getWater() : 0;
-						user.setWater_drops_unused(user.getWater_drops_unused() + luckyDraw.getWater());
+						user.setWater_drops_unused(user.getWater_drops_unused() - luckyDraw.getWater());
 						this.userService.update(user);
 					}
 					if(num >= 0 || water > 0){
