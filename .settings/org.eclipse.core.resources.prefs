@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//WebRoot/WEB-INF/metoo-servlet.xml=UTF-8
+encoding//WebRoot/WEB-INF/templates/uae-en/system/admin/blue=UTF-8
+encoding//WebRoot/WEB-INF/templates/uae-en/system/admin/blue/goods_floor_list_goods.html=UTF-8
+encoding//WebRoot/WEB-INF/web.xml=UTF-8
+encoding//WebRoot/resources/style/system/front/default/css/goods.css=UTF-8
+encoding//WebRoot/resources/style/system/front/default/css/nav.css=UTF-8
+encoding//src/jdbc.properties=UTF-8
+encoding//src/log4j.properties=UTF-8
+encoding//src/mail.properties=UTF-8
+encoding//src/paypal.properties=UTF-8
+encoding/<project>=UTF-8
+encoding/jssecacerts=UTF-8
