@@ -1460,7 +1460,7 @@ public class CommUtil {
 	}
 
 	public static final String randomLowercase(int length) {
-		char[] numbersAndLetters = ("0123456789abcdefghijklmnopqrstuvwxyz" + "0123456789fghijklmnopqrstuvwxyz")
+		char[] numbersAndLetters = ("0123456789abcdefghijklmnopqrstuvwxyz" + "0123456789abcdefghijklmnopqrstuvwxyz")
 				.toCharArray();
 		if (length < 1) {
 			return "";

@@ -92,7 +92,7 @@ import com.metoo.view.web.tools.StoreViewTools;
  * </p>
  * 
  * <p>
- * Company: 沈阳网之商科技有限公司 www.metoo.com
+ * Company: 湖南觅通科技有限公司 www.metoo.com
  * </p>
  * 
  * @author erikzhang

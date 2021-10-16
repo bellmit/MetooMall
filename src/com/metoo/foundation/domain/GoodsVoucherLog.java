@@ -48,6 +48,8 @@ public class GoodsVoucherLog extends IdEntity{
 	private int type;// 日志类型 0：普通日志 1：注册 2：邀约 3：被邀约 4：游戏 5：抽奖
 	
 	private String message;// 日志信息
+	
+	private String message_sa;// 阿语日志
 
 	public GoodsVoucher getGoods_Voucher() {
 		return goods_Voucher;
@@ -130,6 +132,14 @@ public class GoodsVoucherLog extends IdEntity{
 		this.message = message;
 	}
 
+	public String getMessage_sa() {
+		return message_sa;
+	}
+
+	public void setMessage_sa(String message_sa) {
+		this.message_sa = message_sa;
+	}
+
 	/**
 	 * @param status
 	 * @param log_read
@@ -144,12 +154,31 @@ public class GoodsVoucherLog extends IdEntity{
 		this.message = message;
 	}
 	
-	public GoodsVoucherLog(Long id, Date addTime, int status, int log_read, BigDecimal price, Long user_id) {
+	
+	public GoodsVoucherLog(Long id, Date addTime, int status, int log_read, 
+			int type,  BigDecimal price, String message) {
 		super(id, addTime);
 		this.status = status;
 		this.log_read = log_read;
+		this.type = type;
 		this.price = price;
 		this.user_id = user_id;
+		this.message = message;
+	}
+	
+	public GoodsVoucherLog(Long id, Date addTime, int status, int log_read, 
+			int type,  BigDecimal price, String message, String message_sa) {
+		super(id, addTime);
+		this.status = status;
+		this.log_read = log_read;
+		this.type = type;
+		this.price = price;
+		this.user_id = user_id;
+		this.message = message_sa;
+		if(message_sa == null || message_sa.equals("")){
+			this.message = message;
+		}
+		
 	}
 	
 	/**
@@ -181,6 +210,15 @@ public class GoodsVoucherLog extends IdEntity{
 		this.message = message;
 	}
 	
+	
+	public GoodsVoucherLog(Long id, Date addTime, int status, int log_read, BigDecimal price, Long user_id) {
+		super(id, addTime);
+		this.status = status;
+		this.log_read = log_read;
+		this.price = price;
+		this.user_id = user_id;
+	}
+
 	public GoodsVoucherLog(Long id, Date addTime, GoodsVoucher goods_Voucher, 
 			int status, int log_read, BigDecimal price, Long user_id) {
 		super(id, addTime);

@@ -52,6 +52,12 @@ public class Game extends IdEntity{
 	
 	private String explains;// 游戏说明
 	
+	@Column(columnDefinition = "int default 0")
+	private int switchs;// 活动开启关闭 0：关闭 1：开启
+	
+	@Column(columnDefinition = "int default 0")
+	private int num;// 视力游戏可免费娱乐次数
+	
 	public int getWatering_nmber() {
 		return watering_nmber;
 	}
@@ -148,6 +154,20 @@ public class Game extends IdEntity{
 		this.trees = trees;
 	}
 
-	
+	public int getSwitchs() {
+		return switchs;
+	}
+
+	public void setSwitchs(int switchs) {
+		this.switchs = switchs;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
 
 }

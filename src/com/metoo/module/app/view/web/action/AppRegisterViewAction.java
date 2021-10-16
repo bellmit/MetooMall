@@ -536,10 +536,10 @@ public class AppRegisterViewAction {
 						this.appGoodsVoucherTools.getVoucher(goodsVoucherPoint, friend);
 						// 记录邀约日志
 						String message = "Reward for inviting " + user.getUserName() + " to register";
-						this.appGoodsVoucherTools.createLog(goodsVoucherPoint, friend, 2, 0, message, null);
-						
+						String message_sa = "مكافأة لدعوة " + user.getUserName() + " للتسجيل";
+						this.appGoodsVoucherTools.createLog(goodsVoucherPoint, friend, 2, 0, message, message_sa, null);
 						params.clear();
-						params.put("type", 5);// 5：被邀约抵用券
+						params.put("type", 5);// 被邀约抵用券
 						List<GoodsVoucher> goods_voucher_list = this.goodsVoucherService.query("SELECT obj FROM GoodsVoucher obj WHERE obj.type=:type", params, -1, -1);
 						if(goods_voucher_list.size() > 0){
 							GoodsVoucher goodsVoucher = goods_voucher_list.get(0);
@@ -547,7 +547,8 @@ public class AppRegisterViewAction {
 							this.appGoodsVoucherTools.getVoucher(goodsVoucher, user);
 							// 记录邀约日志
 							String message1 = "Reward for registration";
-							this.appGoodsVoucherTools.createLog(goodsVoucher, friend, 3, 0, message1, null);
+							String message_sa1 = "مكافأة للتسجيل";
+							this.appGoodsVoucherTools.createLog(goodsVoucher, user, 3, 0, message1, message_sa1, null);
 							registerMap.put("voucher", goodsVoucher.getNumber());
 						}
 					}else{
@@ -605,7 +606,8 @@ public class AppRegisterViewAction {
 							registerMap.put("voucher", goodsVoucher.getNumber());
 							// 记录邀约日志
 							String message1 = "Reward for registration";
-							this.appGoodsVoucherTools.createLog(goodsVoucher, user, 1, 0, message1, null);
+							String message_sa1 = "مكافأة للتسجيل";
+							this.appGoodsVoucherTools.createLog(goodsVoucher, user, 1, 0, message1, message_sa1, null);
 						}
 					}
 					result = new Result(0, "Success", registerMap);

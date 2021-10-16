@@ -81,8 +81,8 @@ public class AppGameTreeTaskViewAction {
 			user = this.userService.getObjByProperty(null, "app_login_token", token);
 		}
 		Map<String, Object> params = new HashMap<String, Object>();
-		params.put("status", 0);
-		List<Game> games = this.gameService.query("SELECT obj FROM Game obj WHERE obj.status=:status", params, -1, -1);
+		params.put("type", 0);
+		List<Game> games = this.gameService.query("SELECT obj FROM Game obj WHERE obj.type=:type", params, -1, -1);
 		Game game = null;
 		if (games.size() > 0) {
 			game = games.get(0);

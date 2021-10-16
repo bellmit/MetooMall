@@ -1307,7 +1307,8 @@ public class AppCartViewActionV3 {
 												voucher_flag = true;
 												// 记录抵用券使用记录
 												String message = "Purchase consumption";
-												this.appGoodsVoucherTools.createLog(null, user, 1, 1, message, goodsVoucherPrice);
+												String message_sa = "استهلاك الشراء";
+												this.appGoodsVoucherTools.createLog(null, user, 1, 1, message, message_sa, goodsVoucherPrice);
 											}
 											if (whether_gift_in > 0) {
 												of.setWhether_gift(1);

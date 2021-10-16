@@ -1,4 +1,4 @@
-package com.metoo.module.app.view.web.action;
+package com.metoo.module.app.manage.buyer.action;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,7 +33,7 @@ import com.metoo.foundation.service.IUserService;
 
 @Controller
 @RequestMapping("/app/v1/goods_voucher")
-public class AppGoodsVoucherAction {
+public class AppGoodsVoucherBuyerAction {
 	
 	@Autowired
 	private ISysConfigService configService;
@@ -101,7 +101,13 @@ public class AppGoodsVoucherAction {
 				// 1，查询低佣金获取/使用记录
 				ModelAndView mv = new JModelAndView("",
 						configService.getSysConfig(),this.userConfigService.getUserConfig(), 0, request, response);
-				GoodsVoucherLogQueryObject qo = new GoodsVoucherLogQueryObject(currentPage, mv, orderBy,
+				String language = CommUtil.language(request);
+				String construct = "new GoodsVoucherLog(id, addTime, status, log_read, type, price, message)";
+				if(language.equals("sa")){
+					construct = "new GoodsVoucherLog(id, addTime, status, log_read, type, price, message, message_sa)";
+				}
+				GoodsVoucherLogQueryObject qo = new GoodsVoucherLogQueryObject(
+						construct, currentPage, mv, orderBy,
 						orderType);
 				qo.addQuery("obj.user_id", new SysMap("user_id",
 						user.getId()), "=");
@@ -112,6 +118,7 @@ public class AppGoodsVoucherAction {
 				Map params = new HashMap();
 				params.put("user_id", user.getId());
 				params.put("log_read", 0);
+				
 				List<GoodsVoucherLog> goodsVoucherLogs = this.goodsVoucherLogService
 						.query("SELECT obj FROM GoodsVoucherLog obj WHERE obj.user_id=:user_id AND obj.log_read=:log_read", params, -1, -1);
 				if(goodsVoucherLogs.size() > 0){
@@ -121,9 +128,10 @@ public class AppGoodsVoucherAction {
 					}
 				}
 				List<Map> maps = new ArrayList<Map>(); 
+				List<GoodsVoucherLog> GoodsVoucherLogs = pList.getResult();
 				if(pList.getResult().size() > 0 ){
-					List<GoodsVoucherLog> GoodsVoucherLogs = pList.getResult();
-					for(GoodsVoucherLog log : GoodsVoucherLogs){
+//					List<GoodsVoucherLog> GoodsVoucherLogs = pList.getResult();
+					/*for(GoodsVoucherLog log : GoodsVoucherLogs){
 						Map map = new HashMap();
 						map.put("addTime", log.getAddTime());
 						map.put("status", log.getStatus());
@@ -132,9 +140,9 @@ public class AppGoodsVoucherAction {
 						map.put("price", log.getPrice());
 						map.put("message", log.getMessage());
 						maps.add(map);
-					}
+					}*/
 				}
-				return ResponseUtils.ok(maps);
+				return ResponseUtils.ok(GoodsVoucherLogs);
 			}
 		}
 		return ResponseUtils.unlogin();

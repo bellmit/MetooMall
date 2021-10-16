@@ -65,6 +65,7 @@ public class AppGameNotificationViewAction {
 			// 查询所有系统信息、并查询未读信息条数、并设置为已读
 			Map<String, Object> params = new HashMap<String, Object>();
 			params.put("user_id", user.getId());
+			
 			List<GameTreeLog> gameTreeLogs = this.gameTreeLogService
 					.query("SELECT new GameTreeLog(id, addTime, user_id, user_name, type, status, friend_id, friend_name, log_read, water, message) FROM GameTreeLog obj "
 							+ "WHERE obj.user_id=:user_id ORDER BY obj.addTime DESC", params, -1, -1);

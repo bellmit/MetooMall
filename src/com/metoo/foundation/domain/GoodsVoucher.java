@@ -47,7 +47,7 @@ public class GoodsVoucher extends IdEntity{
 	 
 	private Date end_time;// 抵用券失效时间 默认为null 
 	
-	private int type;// 抵用券类型 0：普通抵用券，1: 活动抵用券（种树）没有时间、满减限制；1：有满减限制 2：有时间限制 3：有满减and时间限制 4：注册抵用券  5：邀约抵用券 6:被邀约人抵用券 7:被邀约抵用金额
+	private int type;// 抵用券类型 0：普通抵用券，1: 活动抵用券（种树）没有时间、满减限制；1：有满减限制 2：有时间限制 3：有满减and时间限制 4：注册抵用券  5：邀约抵用券 6:被邀约人抵用券 7:被邀约抵用券
 	// 8: 抽奖抵用券
 	
 	private String msg;// 抵用券描述

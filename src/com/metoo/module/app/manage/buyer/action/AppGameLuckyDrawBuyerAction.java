@@ -46,8 +46,8 @@ import com.metoo.module.app.view.tools.AppGoodsVoucherTools;
  */
 
 @Controller
-@RequestMapping("/app/v1/buyer")
-public class AppLuckyDrawBuyerAction {
+@RequestMapping("/app/v1/buyer/game/lucky/draw")
+public class AppGameLuckyDrawBuyerAction {
 
 	@Autowired
 	private ILuckyDrawService luckyDrawService;
@@ -64,7 +64,7 @@ public class AppLuckyDrawBuyerAction {
 	@Autowired
 	private IGameAwardInfoService gameAwardInfoService;
 
-	@RequestMapping("/lucky_draw.json")
+	@RequestMapping("/property.json")
 	@ResponseBody
 	public Object lucky_draw(HttpServletRequest request, 
 			HttpServletResponse response, String token){
@@ -156,8 +156,9 @@ public class AppLuckyDrawBuyerAction {
 									// 2-1: 记录用户抵用券获取记录
 									this.appGoodsVoucherTools.getVoucher(goods_voucher, user);
 									String message = "Lottery rewards";
+									String message_sa = "مكافآت الحظ";
 									// 2-2: 记录用户抵用券获取记录
-									this.appGoodsVoucherTools.createLog(goods_voucher, user, 5, 0, message, null);
+									this.appGoodsVoucherTools.createLog(goods_voucher, user, 5, 0, message, message_sa, null);
 								}
 							}else if(lucky_draw_award.getType() == 2){
 								user.setWater_drops_unused(user.getWater_drops_unused() + lucky_draw_award.getWater());

@@ -172,7 +172,7 @@ public class AppFriendBuyerTools {
 		Friend obj = new Friend();
 		obj.setAddTime(new Date());
 		obj.setStatus(1);
-		obj.setUser_id(user.getId());
+		obj.setUser(user);
 		obj.setUserName(user.getUserName());
 		obj.setFriend(friend);
 		obj.setMobile(friend.getMobile());
@@ -182,7 +182,7 @@ public class AppFriendBuyerTools {
 			Friend obj1 = new Friend();
 			obj1.setAddTime(new Date());
 			obj1.setStatus(1);
-			obj1.setUser_id(friend.getId());
+			obj1.setUser(friend);
 			obj1.setUserName(friend.getUserName());
 			obj1.setFriend(user);
 			obj1.setFriendName(user.getUsername());

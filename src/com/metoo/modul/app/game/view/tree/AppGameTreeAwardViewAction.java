@@ -148,12 +148,12 @@ public class AppGameTreeAwardViewAction {
 																    + "AND obj.goods_voucher_info.status=:voucher_status", params, -1, -1);*/
 				params.put("user_id", user.getId());
 				params.put("status", 0);
-				params.put("type", 1);
+//				params.put("type", 1);
 				List<GoodsVoucherInfo> goodsVouchers = this.goodsVoucherInfoService
 						.query("select obj from GoodsVoucherInfo obj "
 								+ "WHERE obj.user.id=:user_id "
-								+ "AND obj.status=:status "
-								+ "AND obj.goods_voucher.type=:type", params, -1, -1);
+								+ "AND obj.status=:status ", params, -1, -1);
+				// " + "AND obj.goods_voucher.type=:type
 				
 				double price = 0;
 				for(GoodsVoucherInfo obj : goodsVouchers){
@@ -574,7 +574,7 @@ public class AppGameTreeAwardViewAction {
 	@RequestMapping("/gameAwardOrder.json")
 	@ResponseBody
 	public Object createOrder(String token, Long address_id, String order_type, Long gameAward_id) {
-		String msg = "Successfully";
+		String msg = "Success";
 		int code = 4200;
 		User user = CommUtil.verifyToken(token);
 		if (user != null) {

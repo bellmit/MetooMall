@@ -35,7 +35,7 @@ public class AppGoodsVoucherTools {
 		return false;
 	}
 	
-	public void createLog(GoodsVoucher goods_voucher, User user, int type, int status, String message, Double price){
+	public void createLog(GoodsVoucher goods_voucher, User user, int type, int status, String message, String message_sa, Double price){
 		if (goods_voucher != null || user != null) {
 			GoodsVoucherLog log = new GoodsVoucherLog();
 			log.setAddTime(new Date());
@@ -44,6 +44,7 @@ public class AppGoodsVoucherTools {
 			log.setStatus(status);
 			log.setUser_id(user.getId());
 			log.setMessage(message);
+			log.setMessage_sa(message_sa);
 			if(goods_voucher != null){
 				log.setGoods_Voucher(goods_voucher);
 				log.setPrice(goods_voucher.getNumber());

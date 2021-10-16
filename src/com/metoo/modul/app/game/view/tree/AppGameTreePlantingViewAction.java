@@ -415,7 +415,9 @@ public class AppGameTreePlantingViewAction {
 			user = this.userService.getObjByProperty(null, "app_login_token", token);
 		}
 		if (user != null) { 
-			List<Game> games = this.gameService.query("SELECT obj FROM Game obj", null, -1, -1);
+			Map params = new HashMap();
+			params.put("type", 0);
+			List<Game> games = this.gameService.query("SELECT obj FROM Game obj WHERE obj.type=:type", params, -1, -1);
 			if (games.size() > 0) {
 				Game game = games.get(0);
 				if (game.getStatus() == 0) {
@@ -431,7 +433,7 @@ public class AppGameTreePlantingViewAction {
 								SubTrees subTree = plantingTree.getSubTree();
 								boolean flag = false;
 								if (plantingTree.getStatus() <= 12) {
-									Map params = new HashMap();
+									params.clear();
 									map.put("flag", Boolean.FALSE);
 									if (plantingTree.getGrade_watering() + watering >= subTree.getWatering()) {// 升级
 										params.clear();

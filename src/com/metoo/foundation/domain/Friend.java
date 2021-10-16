@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -33,8 +35,10 @@ import com.metoo.core.domain.IdEntity;
 @Entity
 @Table(name = Globals.DEFAULT_TABLE_SUFFIX + "friend")
 public class Friend extends IdEntity{
-
-	private Long user_id;// 当前用户id
+// 优化为ManyToMany 不应该使用这种模式
+//	private Long user_id;// 当前用户id
+	@ManyToOne(fetch = FetchType.LAZY)
+	private User user;// 当前用户
 	private int status;// 好友状态  0：申请添加 1：同意 2：拒绝  -1:已删除 -2：被拒绝
 	private String userName;// 当前用户名称
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -46,12 +50,12 @@ public class Friend extends IdEntity{
 	private String code;// 好友邀请码
 	private String verification_information;// 验证信息
 	
-	public Long getUser_id() {
-		return user_id;
-	}
-	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
-	}
+//	public Long getUser_id() {
+//		return user_id;
+//	}
+//	public void setUser_id(Long user_id) {
+//		this.user_id = user_id;
+//	}
 	public int getStatus() {
 		return status;
 	}
@@ -106,6 +110,12 @@ public class Friend extends IdEntity{
 	public void setVerification_information(String verification_information) {
 		this.verification_information = verification_information;
 	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	
 	/**
 	 * 
@@ -142,7 +152,13 @@ public class Friend extends IdEntity{
 	 * @param verification_information
 	 */
 	public Friend(Long user_id, String userName, String nickName, int sex) {
-		this.user_id = user_id;
+		
+		this.userName = userName;
+		this.nickName = nickName;
+		this.sex = sex;
+	}
+	public Friend(User user, String userName, String nickName, int sex) {
+		this.user = user;
 		this.userName = userName;
 		this.nickName = nickName;
 		this.sex = sex;

@@ -2,6 +2,8 @@ package com.metoo.modul.app.game.view.tree;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -10,6 +12,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.nutz.json.Json;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +33,7 @@ import com.metoo.foundation.domain.Game;
 import com.metoo.foundation.domain.GameAward;
 import com.metoo.foundation.domain.GameGoods;
 import com.metoo.foundation.domain.GameTreeLog;
+import com.metoo.foundation.domain.GoodsVoucher;
 import com.metoo.foundation.domain.GoodsVoucherLog;
 import com.metoo.foundation.domain.PlantingTrees;
 import com.metoo.foundation.domain.SubTrees;
@@ -125,7 +129,7 @@ public class AppGameTreeFriendBuyerAction {
 				params.put("status", 1);
 				List<Friend> friends = this.friendService
 						.query("SELECT obj FROM " + "Friend obj " + "WHERE obj.deleteStatus=:deleteStatus "
-								+ "AND obj.user_id=:user_id " + "AND obj.status=:status", params, -1, -1);
+								+ "AND obj.user.id=:user_id " + "AND obj.status=:status", params, -1, -1);
 				for (Friend friend : friends) {
 					Map<String, Object> map = this.appUserTools.get(friend.getFriend());
 					map.put("friend_id", friend.getFriend().getId());
@@ -222,7 +226,7 @@ public class AppGameTreeFriendBuyerAction {
 						params.put("friend_id", friend.getId());
 						params.put("status", 1);
 						friendList = this.friendService.query(
-								"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user_id=:user_id AND obj.friend.id=:friend_id AND obj.status=:status",
+								"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user.id=:user_id AND obj.friend.id=:friend_id AND obj.status=:status",
 								params, -1, -1);
 						if (friendList.size() < 1) {// 判断 user <==> friend
 													// 是否互为好友
@@ -233,7 +237,7 @@ public class AppGameTreeFriendBuyerAction {
 							params.put("friend_id", user.getId());
 							params.put("status", 0);
 							friendList = this.friendService.query(
-									"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user_id=:user_id AND obj.friend.id=:friend_id AND obj.status=:status",
+									"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user.id=:user_id AND obj.friend.id=:friend_id AND obj.status=:status",
 									params, -1, -1);
 							if (friendList.size() < 1) {// 判断 A <== B
 														// 好友是否已添加我为好友、已添加自动设置双方为好友
@@ -243,7 +247,7 @@ public class AppGameTreeFriendBuyerAction {
 								params.put("user_id", user.getId());
 								params.put("friend_id", friend.getId());
 								friendList = this.friendService.query(
-										"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user_id=:user_id AND obj.friend.id=:friend_id",
+										"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user.id=:user_id AND obj.friend.id=:friend_id",
 										params, -1, -1);
 								// 查询今天是否已提交申请 to_days
 								params.clear();
@@ -262,7 +266,8 @@ public class AppGameTreeFriendBuyerAction {
 									obj = new Friend();
 									obj.setAddTime(new Date());
 									obj.setStatus(0);
-									obj.setUser_id(user.getId());
+//									obj.setUser_id(user.getId());
+									obj.setUser(user);
 									obj.setUserName(user.getUserName());
 
 									obj.setFriend(friend);
@@ -312,7 +317,8 @@ public class AppGameTreeFriendBuyerAction {
 								Friend newFriend = new Friend();
 								newFriend.setAddTime(new Date());
 								newFriend.setStatus(1);
-								newFriend.setUser_id(user.getId());
+//								newFriend.setUser_id(user.getId());
+								newFriend.setUser(user);
 								newFriend.setUserName(user.getUserName());
 
 								newFriend.setFriendName(friend.getUserName());
@@ -388,7 +394,7 @@ public class AppGameTreeFriendBuyerAction {
 					params.put("friend_id", friend.getId());
 					params.put("status", 1);
 					friends = this.friendService.query(
-							"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.friend.id=:friend_id AND obj.user_id=:user_id AND obj.status=:status",
+							"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.friend.id=:friend_id AND obj.user.id=:user_id AND obj.status=:status",
 							params, -1, -1);
 					if (friends.size() < 1) {
 						// 查询是否有此好友申请
@@ -398,7 +404,7 @@ public class AppGameTreeFriendBuyerAction {
 						params.put("friend_id", user.getId());
 						params.put("status", 0);
 						friends = this.friendService.query(
-								"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.friend.id=:friend_id AND obj.user_id=:user_id AND obj.status=:status",
+								"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.friend.id=:friend_id AND obj.user.id=:user_id AND obj.status=:status",
 								params, -1, -1);
 						if (friends.size() > 0) {
 							for (Friend obj : friends) {
@@ -407,7 +413,8 @@ public class AppGameTreeFriendBuyerAction {
 								Friend newFriend = new Friend();
 								newFriend.setAddTime(new Date());
 								newFriend.setStatus(status == 1 ? 1 : status == 2 ? 2 : 0);
-								newFriend.setUser_id(user.getId());
+//								newFriend.setUser_id(user.getId());
+								newFriend.setUser(user);
 								newFriend.setUserName(user.getUserName());
 
 								newFriend.setFriendName(friend.getUserName());
@@ -489,7 +496,7 @@ public class AppGameTreeFriendBuyerAction {
 					params.put("friend_id", friend.getId());
 					params.put("status", 1);
 					List<Friend> friendList = this.friendService.query(
-							"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user_id=:user_id AND obj.friend.id=:friend_id AND obj.status=:status",
+							"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user.id=:user_id AND obj.friend.id=:friend_id AND obj.status=:status",
 							params, -1, -1);
 					if (friendList.size() > 0) {
 						for (Friend f : friendList) {
@@ -503,7 +510,7 @@ public class AppGameTreeFriendBuyerAction {
 						params.put("friend_id", user.getId());
 						params.put("status", 1);
 						List<Friend> friends = this.friendService.query(
-								"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user_id=:user_id AND obj.friend.id=:friend_id AND obj.status=:status",
+								"SELECT obj FROM Friend obj WHERE obj.deleteStatus=:deleteStatus AND obj.user.id=:user_id AND obj.friend.id=:friend_id AND obj.status=:status",
 								params, -1, -1);
 						if (friends.size() > 0) {
 							Friend obj = friends.get(0);
@@ -571,8 +578,8 @@ public class AppGameTreeFriendBuyerAction {
 				params.put("user", user.getId());
 				params.put("friend", friend.getId());
 				params.put("status", 1);
-				List<User> objs = this.userService.query(
-						"SELECT obj FROM Friend obj WHERE obj.user_id=:user AND obj.friend.id=:friend AND obj.status=:status",
+				List<Friend> objs = this.friendService.query(
+						"SELECT obj FROM Friend obj WHERE obj.user.id=:user AND obj.friend.id=:friend AND obj.status=:status",
 						params, -1, -1);
 				if (objs.size() > 0) {
 					map.put("unused_water", friend.getWater_drops_unused());
@@ -645,8 +652,8 @@ public class AppGameTreeFriendBuyerAction {
 			User user = this.userService.getObjByProperty(null, "app_login_token", token);
 			int unused = user.getWater_drops_unused();
 			Map params = new HashMap();
-
-			List<Game> games = this.gameService.query("SELECT obj FROM Game obj", params, -1, -1);
+			params.put("type", 0);
+			List<Game> games = this.gameService.query("SELECT obj FROM Game obj WHERE obj.type=:type", params, -1, -1);
 			Game gameTree = null;
 			if (games.size() > 0) {
 				gameTree = games.get(0);
@@ -898,8 +905,8 @@ public class AppGameTreeFriendBuyerAction {
 			User user = this.userService.getObjByProperty(null, "app_login_token", token);
 			int unused = user.getWater_drops_unused();
 			Map params = new HashMap();
-
-			List<Game> games = this.gameService.query("SELECT obj FROM Game obj", params, -1, -1);
+			params.put("type", 0);
+			List<Game> games = this.gameService.query("SELECT obj FROM Game obj WHERE obj.type=:type", params, -1, -1);
 			Game game = null;
 			if (games.size() > 0) {
 				game = games.get(0);
@@ -998,14 +1005,14 @@ public class AppGameTreeFriendBuyerAction {
 	public Object ranking(HttpServletRequest request, HttpServletResponse response, 
 			String currentPage, String orderBy, String orderType, String token){
 		if (!CommUtil.null2String(token).equals("")) {
-			User user = this.userService.getObjByProperty(null, "app_login_token", token);
+			User user = userService.getObjByProperty(null, "app_login_token", token);
 			if(user != null){
-				if(orderBy == null){
+				/*if(orderBy == null || orderBy.equals("")){
 					orderBy = "friend.planting_trees.watering";
 				}
-				if(orderType == null){
+				if(orderType == null || orderType.equals("")){
 					orderType = "DESC";
-				}
+				}*/
 				/*Map params = new HashMap();
 				params.put("friend_id", user.getId());
 				params.put("deleteStatus", 0);
@@ -1029,10 +1036,11 @@ public class AppGameTreeFriendBuyerAction {
 				IPageList pList = this.friendService.list(qo);
 				List<Map> maps = new ArrayList<Map>(); 
 				if(pList.getResult().size() > 0 ){
-					List<Friend> Friends = pList.getResult();
-					for(Friend friend : Friends){
+					List<Friend> friends = pList.getResult();
+					compareToFriend(friends);
+					for(Friend friend : friends){
 						Map map = new HashMap();
-						map.put("user_id", friend.getUser_id());
+						map.put("user_id", friend.getUser().getId());
 						map.put("userName", friend.getUserName());
 						map.put("sex", friend.getSex());
 						if (friend.getSex() == -1) {
@@ -1047,7 +1055,7 @@ public class AppGameTreeFriendBuyerAction {
 							map.put("photo", this.configService.getSysConfig().getImageWebServer() + "/"
 									+ "resources" + "/" + "style" + "/" + "common" + "/" + "images" + "/" + "member1.png");
 						}
-						User obj = this.userService.getObjById(friend.getUser_id());
+						User obj = this.userService.getObjById(friend.getUser().getId());
 						if(obj.getPlanting_trees() != null){
 							map.put("progress",
 									Math.floor(CommUtil.div02(obj.getPlanting_trees().getWatering(), obj.getPlanting_trees().getTree().getWaters()) * 100));
@@ -1055,7 +1063,7 @@ public class AppGameTreeFriendBuyerAction {
 							map.put("progress", 0);
 						}
 						map.put("tree", user.getTrees().size());
-						map.put("water", obj.getPlanting_trees().getWatering());
+						map.put("water", obj.getPlanting_trees() != null ? obj.getPlanting_trees().getWatering() : 0);
 						maps.add(map);
 					}
 				}
@@ -1064,6 +1072,19 @@ public class AppGameTreeFriendBuyerAction {
 		}
 		return ResponseUtils.unlogin();
 		
+	}
+	
+	public static void compareToFriend(List<Friend> list){
+		Collections.sort(list, new Comparator<Friend>() {
+	        @Override
+	        public int compare(Friend o1, Friend o2) {
+	        	User obj1 = o1.getUser();
+	        	Integer water1 = obj1.getPlanting_trees() != null ? obj1.getPlanting_trees().getWatering() : 0;
+	        	User obj2 = o2.getUser();
+	        	Integer water2 = obj2.getPlanting_trees() != null ? obj2.getPlanting_trees().getWatering() : 0;
+	            return water2.compareTo(water1);
+	        }
+	    });
 	}
 
 }

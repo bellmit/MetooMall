@@ -106,7 +106,8 @@ public class GameAwardRandomServiceImpl implements IGameAwardRandomService {
 				map.put("award", JSONObject.toJSON(goods_voucher));
 				// 记录随机奖励抵用券日志
 				String message = "Lottery rewards";
-				this.appGoodsVoucherTools.createLog(goods_voucher, user, 4, 0, message, null);
+				String message_sa = "مكافآت الحظ";
+				this.appGoodsVoucherTools.createLog(goods_voucher, user, 4, 0, message, message_sa, null);
 				break;
 			default:
 				break;

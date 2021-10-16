@@ -241,6 +241,10 @@ public class User extends IdEntity implements UserDetails {
 	private List<GameUserTask> guts = new ArrayList<GameUserTask>() ;// 用户是否领取任务 
 	@OneToMany(mappedBy = "friend", cascade = CascadeType.REMOVE)
 	private List<Friend> friends = new ArrayList<Friend>();// 用户好友列表
+	
+	@OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+	private List<Friend> users = new ArrayList<Friend>();// 用户好友列表
+	
 	private String firebase_token;// 用户当前设备应用token
 	
 	public String getAutomatic() {
